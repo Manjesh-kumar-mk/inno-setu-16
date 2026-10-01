@@ -194,7 +194,7 @@ a:hover {
 
 .main-content {
   flex: 1;
-  padding: 24px 32px;
+  padding: 24px 32px 32px;
   max-width: 1600px;
   margin: 0 auto;
   width: 100%;
@@ -208,10 +208,14 @@ a:hover {
   width: 100%;
   overflow-x: hidden;
 }
-
+/* Reserve space for the fixed header */
+.app-shell,
+.public-shell {
+  padding-top: var(--header-height);
+}
 .public-content {
   flex: 1;
-  padding: 24px 32px;
+  padding: 24px 32px 48px;
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
@@ -221,15 +225,21 @@ a:hover {
 /* Enterprise Header Styles */
 .app-header {
   height: var(--header-height);
+  min-height: var(--header-height);
+  flex-shrink: 0;
   background-color: var(--navy-950);
   color: var(--text-inverse);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  position: sticky;
+
+  position: fixed;
   top: 0;
-  z-index: 50;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -1030,7 +1040,11 @@ a:hover {
   position: fixed;
   top: var(--header-height);
   left: 0;
-  right: 0;
+  right: auto;
+  width: 280px;
+  max-width: 85vw;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
   background-color: var(--navy-950);
   border-bottom: 1px solid var(--navy-800);
   padding: 16px 20px;
