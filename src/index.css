@@ -1192,76 +1192,109 @@ a:hover {
 /* ==========================================================================
    Breakpoints & Responsive Media Queries
    ========================================================================== */
-@media (max-width: 1024px) {
-  .grid-cols-4,
-  .grid-cols-3,
-  .responsive-grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1480px) {
+  .app-header {
+    padding: 0 12px;
   }
 
-  .app-sidebar {
-    position: fixed;
-    top: 0;
-    left: -280px;
-    width: 280px;
-    height: 100vh;
-    z-index: 100;
-    box-shadow: var(--shadow-overlay);
-    transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  .gov-badge {
+    display: none;
   }
 
-  .app-sidebar.open {
-    left: 0;
+  .header-demo-switcher {
+    display: none !important;
   }
 
-  .sidebar-mobile-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    background-color: var(--navy-950);
-    color: white;
-    border-bottom: 1px solid var(--navy-800);
+  .brand-logo span:last-child {
+    display: none;
   }
 
-  .sidebar-mobile-close {
-    background: transparent;
-    border: none;
-    color: #94A3B8;
-    font-size: 1.25rem;
-    cursor: pointer;
-    padding: 6px;
-    display: flex;
-    align-items: center;
+  .search-trigger span {
+    display: none;
+  }
+
+  .search-trigger {
+    padding: 8px;
+    min-height: 38px;
+    min-width: 38px;
+    width: 38px;
     justify-content: center;
-    border-radius: var(--radius-sm);
-    min-width: 44px;
-    min-height: 44px;
   }
 
-  .sidebar-mobile-close:hover {
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
+  .dept-selector {
+    max-width: 110px;
+    font-size: 0.72rem;
+  }
+
+  .public-nav-links {
+    display: none;
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .public-hero-section {
+    padding: 36px 20px;
+  }
+
+  .public-hero-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
   }
 }
 
 @media (max-width: 900px) {
-  .responsive-grid-2-1,
-  .responsive-grid-1-2 {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .app-header {
+    padding: 0 12px;
   }
 
-  .responsive-phases-grid {
-    overflow-x: auto;
-    min-width: 580px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
+  .gov-badge {
+    display: none;
+  }
+
+  .header-demo-switcher {
+    display: none !important;
+  }
+
+  .brand-logo span:last-child {
+    display: none;
+  }
+
+  .search-trigger span {
+    display: none;
+  }
+
+  .search-trigger {
+    padding: 8px;
+    min-height: 38px;
+    min-width: 38px;
+    width: 38px;
+    justify-content: center;
+  }
+
+  .dept-selector {
+    max-width: 110px;
+    font-size: 0.72rem;
+  }
+
+  .public-nav-links {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .public-hero-section {
+    padding: 36px 20px;
+  }
+
+  .public-hero-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
   }
 }
 
